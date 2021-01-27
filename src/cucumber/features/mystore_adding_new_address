@@ -1,0 +1,26 @@
+Feature: adding new address
+
+  Scenario Outline: user can create new address
+
+    Given open browser to MyStore page
+    And user goes to login page
+
+    When user completes email and password boxes with grudzien.artur@gmail.com and 123456 and signs in
+
+    And user goes to Addresses page
+    And user clicks on 'Create new address' button
+
+    When user completes <alias>, <address>, <city>, <postal_code> and <phone>
+
+    Then user checks for correct information
+
+    Then submits new address
+
+    Examples:
+      | alias | address | city   | postal_code | phone      |
+      | Art1  | Biala   | Gdansk | 80-288      | 0505050505 |
+#      | Art2  | Czarna  | Krakow | 66-666      | 5555555    |
+#      | Art3  | Ciasna  | Warsaw | 55-555      | Poland  | 444444     |
+#      | Art4  | Zgnila  | Gdynia | 44-444      | Poland  | 454578812  |
+
+
