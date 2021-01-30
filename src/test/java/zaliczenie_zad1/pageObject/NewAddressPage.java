@@ -1,14 +1,10 @@
 package zaliczenie_zad1.pageObject;
 
-import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import zaliczenie_zad1.MyStoreAddNewAddress;
 
-import java.sql.SQLOutput;
-import java.util.List;
 
 public class NewAddressPage {
 
@@ -36,11 +32,8 @@ public class NewAddressPage {
     @FindBy(css = ".btn.btn-primary")
     WebElement saveButton;
 
-    @FindBy(className = ("[class=\"address-body\"]"))
-    List<WebElement> addressBody;
-
-
-
+    @FindBy(xpath = ("//*[@id=\"notifications\"]/div/article/ul/li"))
+    WebElement success;
 
 
     public NewAddressPage(WebDriver driver) {
@@ -49,7 +42,7 @@ public class NewAddressPage {
 
     }
 
-    public void completeRequiredFields(String alias, String address, String city, String postal_code, String phone){
+    public void completeRequiredFields(String alias, String address, String city, String postal_code, String phone) {
         aliasInput.sendKeys(alias);
         addressInput.sendKeys(address);
         cityInput.sendKeys(city);
@@ -58,17 +51,19 @@ public class NewAddressPage {
 
     }
 
-    public void checkInputs(String alias, String address, String city, String postal_code, String phone){
-        System.out.println(alias + address + city + postal_code + phone);
+    public void checkInputs() {
+    if (success.isDisplayed()) {
+        System.out.println("kurde działa!!!! dodało adres poprawnie");
+    } else {
+        System.out.println("kurde nie dziala");
+    }
 
+//        System.out.println(alias + address + city + postal_code + phone);
+//        String aliasValue = aliasInput.getText();
+//        System.out.println(aliasValue + " z lewej cos powinno byc");
+//        System.out.println("dupa daup powyzej powinno sie copokazac");
 
-        String aliasValue = aliasInput.getText();
-        System.out.println(aliasValue + " z lewej cos powinno byc");
-
-
-        System.out.println("dupa daup powyzej powinno sie copokazac");
-
-        System.out.println(aliasValue);
+//        System.out.println(aliasValue);
 
 //
 //        Assert.assertEquals(aliasValue, alias);
@@ -89,16 +84,12 @@ public class NewAddressPage {
 //        cityInput.getText();
 //        postcodeInput.getText();
 //        phoneInput.getText();
-        System.out.println(aliasInput.getText());
+//        System.out.println(aliasInput.getText());
 
     }
 
 
-
-
-
-
-    public void submit(){
+    public void submit() {
         saveButton.click();
     }
 }

@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.MyCartPage;
 import pageobject.OrderAddressPage;
 import zaliczenie_zad1.pageObject.*;
+
 import java.util.concurrent.TimeUnit;
 
 public class MyStoreBuyingStuffTest {
@@ -17,7 +18,7 @@ public class MyStoreBuyingStuffTest {
     private LoginPage loginPage;
     private AccountPage accountPage;
     private ClothesPage clothesPage;
-    private SearchResultsPage searchResultsPage;
+//    private SearchResultsPage searchResultsPage;
     private String login = "grudzien.artur@gmail.com";
     private String password = "123456";
     private SweaterPage sweaterPage;
@@ -55,11 +56,11 @@ public class MyStoreBuyingStuffTest {
         accountPage.goToClothes();
         clothesPage.clickOnSweaterThumbnail();
         sweaterPage.chooseSize();
-        sweaterPage.setQuantity();
-        System.out.println("dodało ilosć, teraz potwierdzenie");
+        sweaterPage.setQuantity(quantity);
+//        System.out.println("dodało ilosć, teraz potwierdzenie");
 
 
-        sweaterPage.addtoCart();
+        sweaterPage.addToCart();
 
         TimeUnit.SECONDS.sleep(2);
 
@@ -73,13 +74,15 @@ public class MyStoreBuyingStuffTest {
         orderAddressPage.choosingPaymentMethodByCheck();
 //        orderAddressPage.takeSnapShot();
 
+        System.out.println("sweterek zakupiony, idź kupuj więcej crapu!!!");
+
 
     }
 
 
-    @After
-    public void closeBrowser() {
-        driver.quit();
-    }
+//    @After
+//    public void closeBrowser() {
+//        driver.quit();
+//    }
 
 }

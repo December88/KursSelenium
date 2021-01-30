@@ -3,16 +3,16 @@ Feature: adding new address
   Scenario Outline: user can create new address
 
     Given open browser to MyStore page
+
     And user goes to login page
 
     When user completes email and password boxes with grudzien.artur@gmail.com and 123456 and signs in
 
     And user goes to Addresses page
+
     And user clicks on 'Create new address' button
 
     When user completes <alias>, <address>, <city>, <postal_code> and <phone>
-
-    Then user checks for correct information
 
     Then submits new address
 

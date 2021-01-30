@@ -52,7 +52,7 @@ public class OrderAddressPage {
 //        shippingMethodMenuUnfolding.click();
 //        System.out.println("zaraz click na presta shop");
 //        prestaShopRadioButton.click();
-        System.out.println("zaraz klikanie confirmacji shippingu");
+//@@        System.out.println("zaraz klikanie confirmacji shippingu");
         shippingMethodConfirmation.click();
 
 

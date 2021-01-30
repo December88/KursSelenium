@@ -41,11 +41,11 @@ public class SweaterPage {
 
     }
 
-    public void setQuantity() {
-        quantity.clear();
-        quantity.sendKeys("5");
+    public void setQuantity(String quantity) {
+        this.quantity.clear();
+        this.quantity.sendKeys(quantity);
     }
-    public void addtoCart(){
+    public void addToCart(){
         addToCartButton.click();
     }
 

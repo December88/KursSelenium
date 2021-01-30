@@ -7,11 +7,10 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.AccountPage;
+import zaliczenie_zad1.pageObject.AddressPage;
 import zaliczenie_zad1.pageObject.LoginPage;
 import zaliczenie_zad1.pageObject.MyStoreMainPage;
-import zaliczenie_zad1.pageObject.AddressPage;
 import zaliczenie_zad1.pageObject.NewAddressPage;
-
 
 public class MyStoreAddNewAddress {
     private WebDriver driver;
@@ -24,7 +23,8 @@ public class MyStoreAddNewAddress {
     //    private LoginPage loginAs;
 //    private String login = "grudzien.artur@gmail.com";
 //    private String password = "123456";
-
+//    public String alias;
+//    public String address;
 
 
     //definicje metod
@@ -78,11 +78,10 @@ public class MyStoreAddNewAddress {
     @When("user completes (.*), (.*), (.*), (.*) and (.*)")
     public void completeFields(String alias, String address, String city, String postal_code, String phone) throws InterruptedException {
         newAddressPage.completeRequiredFields(alias, address, city, postal_code, phone);
-        System.out.println("zeczynam czekanie");
+//        System.out.println("zeczynam czekanie");
 //        TimeUnit.SECONDS.sleep(5);
-        System.out.println("skonczylem czekanie");
+//        System.out.println("skonczylem czekanie");
 
-        newAddressPage.checkInputs(alias, address, city, postal_code, phone);
     }
 
 
@@ -95,8 +94,8 @@ public class MyStoreAddNewAddress {
 
     @Then("user checks for correct information")
 
-
     public void checkInputsValue() {
+        newAddressPage.checkInputs();
 
 
     }
