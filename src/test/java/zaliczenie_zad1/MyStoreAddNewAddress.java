@@ -86,11 +86,21 @@ public class MyStoreAddNewAddress {
     public void completeFields(String alias, String address, String city, String postal_code, String phone) throws InterruptedException {
         newAddressPage.completeRequiredFields(alias, address, city, postal_code, phone);
         System.out.println("zeczynam czekanie");
-        TimeUnit.SECONDS.sleep(5);
+//        TimeUnit.SECONDS.sleep(5);
         System.out.println("skonczylem czekanie");
 
         newAddressPage.checkInputs(alias,address,city,postal_code,phone);
     }
+
+
+
+    @Then("submits new address")
+
+    public void submit(){
+        newAddressPage.submit();
+    }
+
+
 
     @Then("user checks for correct information")
 
@@ -106,11 +116,7 @@ public class MyStoreAddNewAddress {
 
 
 
-    @Then("submits new address")
 
-     public void submit(){
-        newAddressPage.submit();
-     }
 
 
 

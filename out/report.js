@@ -144,14 +144,14 @@ formatter.match({
   "location": "MyStoreAddNewAddress.openMyStorePage()"
 });
 formatter.result({
-  "duration": 7878319500,
+  "duration": 7898555600,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreAddNewAddress.openLoginPage()"
 });
 formatter.result({
-  "duration": 27800,
+  "duration": 37300,
   "status": "passed"
 });
 formatter.match({
@@ -168,21 +168,21 @@ formatter.match({
   "location": "MyStoreAddNewAddress.userLogin(String,String)"
 });
 formatter.result({
-  "duration": 939927400,
+  "duration": 888176400,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreAddNewAddress.goToAddress()"
 });
 formatter.result({
-  "duration": 362008000,
+  "duration": 344485500,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreAddNewAddress.clickAddAddressButton()"
 });
 formatter.result({
-  "duration": 400250800,
+  "duration": 352669900,
   "status": "passed"
 });
 formatter.match({
@@ -211,21 +211,21 @@ formatter.match({
   "location": "MyStoreAddNewAddress.completeFields(String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 5467623100,
+  "duration": 475807300,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreAddNewAddress.checkInputsValue()"
 });
 formatter.result({
-  "duration": 26300,
+  "duration": 25600,
   "status": "passed"
 });
 formatter.match({
   "location": "MyStoreAddNewAddress.submit()"
 });
 formatter.result({
-  "duration": 445945100,
+  "duration": 526529200,
   "status": "passed"
 });
 });

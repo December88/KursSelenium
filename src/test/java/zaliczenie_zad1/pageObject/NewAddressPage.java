@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import zaliczenie_zad1.MyStoreAddNewAddress;
 
 import java.sql.SQLOutput;
+import java.util.List;
 
 public class NewAddressPage {
 
@@ -34,6 +35,9 @@ public class NewAddressPage {
 
     @FindBy(css = ".btn.btn-primary")
     WebElement saveButton;
+
+    @FindBy(className = ("[class=\"address-body\"]"))
+    List<WebElement> addressBody;
 
 
 
