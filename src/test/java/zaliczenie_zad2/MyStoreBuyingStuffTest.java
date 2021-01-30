@@ -1,16 +1,13 @@
 package zaliczenie_zad2;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.MyCartPage;
 import pageobject.OrderAddressPage;
 import zaliczenie_zad1.pageObject.*;
-
-import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class MyStoreBuyingStuffTest {
@@ -69,29 +66,20 @@ public class MyStoreBuyingStuffTest {
 
         sweaterPage.goToCheckout();
 
-        System.out.println("teraz bedzie proceed to chekout");
         myCartPage.goToCheckout();
 
         orderAddressPage.addressCofirmation();
-        System.out.println("adresconfirmation");
         orderAddressPage.choosingShippingMethodPrestaShop();
-        System.out.println("po choosing shipment");
         orderAddressPage.choosingPaymentMethodByCheck();
-        System.out.println("teraz powinno byc po choosingpayment");
 //        orderAddressPage.takeSnapShot();
 
 
     }
 
-    {
 
+    @After
+    public void closeBrowser() {
+        driver.quit();
     }
-
-
-
-//    @After
-//    public void closeBrowser(){
-//        driver.quit();
-//    }
 
 }

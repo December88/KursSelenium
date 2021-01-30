@@ -16,11 +16,16 @@ Feature: adding new address
 
     Then submits new address
 
+    Then user checks for correct information
+
+    Then close browser
+
+
     Examples:
       | alias | address | city   | postal_code | phone      |
       | Art1  | Biala   | Gdansk | 80-288      | 0505050505 |
-#      | Art2  | Czarna  | Krakow | 66-666      | 5555555    |
-#      | Art3  | Ciasna  | Warsaw | 55-555      | Poland  | 444444     |
-#      | Art4  | Zgnila  | Gdynia | 44-444      | Poland  | 454578812  |
+      | Art2  | Czarna  | Krakow | 66-666      | 5555555    |
+      | Art3  | Ciasna  | Warsaw | 55-555      | 444444     |
+      | Art4  | Zgnila  | Gdynia | 44-444      | 454578812  |
 
 
